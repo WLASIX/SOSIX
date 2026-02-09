@@ -1,0 +1,39 @@
+{
+  "nvidia_api": {
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "model": "mistralai/mistral-small-24b-instruct",
+    "api_key": {
+      "source": "env",
+      "env_var": "NVIDIA_API_KEY"
+    },
+    "generation_params": {
+      "temperature": 0.99,
+      "top_p": 0.70,
+      "max_tokens": 8192
+    },
+    "stream": false,
+    "enable_reasoning": false
+  },
+  "browser": {
+    "headless": false,
+    "slow_motion": 500,
+    "timeout": 30000,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "agent": {
+    "max_iterations": 50,
+    "page_timeout": 10000,
+    "verbose_logging": true,
+    "search_engine": "google",
+    "search_engines": {
+      "google": "https://www.google.com/search?q={query}",
+      "duckduckgo": "https://duckduckgo.com/?q={query}"
+    }
+  },
+  "logging": {
+    "level": "INFO"
+  }
+}
